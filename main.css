@@ -1,0 +1,57 @@
+* {
+  border: 1px solid gold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 800px;
+  max-height: 1000px;
+  /* background-color: grey; */
+  margin: auto;
+  background-image: url('img/alex_ethan.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.dad-bubble {
+  background-color:transparent;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  /* z-index: -1; */
+  position: absolute;
+}
+
+
+.ethan-bubble {
+  text-align: center;
+  position: relative;
+  content:url('img/speech_bubble_3.png');
+  width: 500px;
+  height: auto;
+  transform: scaleX(-1); */
+}
+
+.thirdsecond {
+  padding-top: 200px
+}
+
+body {
+  /* background-image: url('img/alex_ethan.jpg'); */
+  /* background-position: center;
+  background-repeat: no-repeat; */
+}
+
+dd {
+  padding: 2em;
+  font-size: 1em;
+}
+
+
+p {
+  font-size: 1em;
+}
