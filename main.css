@@ -1,57 +1,86 @@
-* {
+/* * {
   border: 1px solid gold;
+} */
+body {
+  background-color: grey;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  padding: 50px;
   justify-content: center;
-  max-width: 800px;
-  max-height: 1000px;
-  /* background-color: grey; */
+}
+
+.book {
+  display: flex;
+  border-radius: 40px;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 680px;
+  height: 900px;
   margin: auto;
   background-image: url('img/alex_ethan.jpg');
   background-position: top;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .dad-bubble {
-  background-color:transparent;
+  color: black;
+  background-color: transparent;
+  height: 440px;
+  position: relative;
 }
 
-h1 {
-  color: red;
-  text-align: center;
-  /* z-index: -1; */
+.dad-bubble h3 {
+  color: black;
+  font-size: 30px;
+  width: 500px;
+  transform: translateY(-460px) translateX(17%);
   position: absolute;
 }
 
+.dad-bubble img {
+  transform: translateY(-32%) translateX(3%);
+  width: 100%;
+  position: relative;
+}
 
 .ethan-bubble {
-  text-align: center;
+  height: 460px;
   position: relative;
-  content:url('img/speech_bubble_3.png');
-  width: 500px;
-  height: auto;
-  transform: scaleX(-1); */
 }
 
-.thirdsecond {
-  padding-top: 200px
+.ethan-bubble img {
+  float: right;
+  padding: 10px;
+  width: 65%;
 }
 
-body {
-  /* background-image: url('img/alex_ethan.jpg'); */
-  /* background-position: center;
-  background-repeat: no-repeat; */
+.ethan-bubble h1 {
+  color: black;
+  width: 200px;
+  font-size: 50px;
+  text-align: center;
+  align-content: right;
+  transform: translateY(20%) translateX(190%);
+  position: absolute;
+  font-size: 40px;
 }
 
-dd {
-  padding: 2em;
-  font-size: 1em;
+#button {
+  z-index: 1;
+  position: absolute;
+  transform: translateY(700%) translateX(415%);
+  font-size: 20px;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
-
 
 p {
   font-size: 1em;
+}
+
+#dad-bubble-image {
+  display: none;
 }

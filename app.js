@@ -1,6 +1,13 @@
 
 
 $(() => {
+    const randomEthan = ['img/ethan_laugh1.jpg', 'img/ethan_slap.gif', 'img/ethan_angry.jpg']
+    // const showButton = () => {
+    //     $('#button').show()
+    // }
+
+    // showButton()
+
     $('form').on('submit', (event) => {
         event.preventDefault();
         $.ajax(
@@ -10,13 +17,37 @@ $(() => {
         ).then(
             (data) => {
                 console.log(data.attachments[0].fallback);
-                $('#joke').html(data.attachments[0].fallback);
+                $('h3').html(data.attachments[0].fallback);
+                $('#dad-bubble-image').css('display', 'block');
+                $('.ethan-bubble').children().hide();
+                // $('.book').css('background-image', `url('img/ethan_slap.gif')`)
+                createBackgroundListner();
+                console.log(createBackgroundListner);
+
             },
             (error) => {
                 console.log(error);
             }
         )
     })
+
+
+    const createBackgroundListner = () => {
+      $('body').on('click', (event) => {
+        $('.dad-bubble').children().hide();
+        $('.book').css('background-image', `url(${randomEthan[0]})`);
+        console.log($('#dad-bubble-image'))
+        $('#ethan-bubble-image').attr('src', 'img/think_bubble.png');
+        $('.ethan-bubble').children().show();
+        $('#ethan-h1-text').html(`You're so funny dad!`);
+        $('body').removeEventListener()
+    })
+  }
+
+
+
+
+
 })
 
 
