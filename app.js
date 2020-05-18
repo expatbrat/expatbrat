@@ -5,6 +5,7 @@ $(() => {
     const randomEthanQuote = [`Don't quit your day job.`, 'That was so cheesy!', 'Your jokes suck, loser.', 'Bahahaha! Good one dad!', 'Tell me another one!']
     const bubblePosition = ['translateY(40%) translateX(190%)', 'translateY(80%) translateX(190%)', 'translateY(80%) translateX(190%)', 'translateY(60%) translateX(190%)', 'translateY(60%) translateX(190%)'];
     let respectForFather = 300;
+    $('h2').html(`Respect for Father: ${respectForFather}%`);
     const respectValues = [5, -1, -10, -20, 1];
     const createBackgroundListner = () => {
       $('body').on('click', (event) => {
@@ -22,12 +23,14 @@ $(() => {
         if (respectForFather < 0) {
           $('h2').css('color', 'red');
         };
+        if (true) {
+          console.log('tests')
+        }
         $('body').on('click', (event) => {
            resetPage()
          })
       })
     }
-
 
     const resetPage = () => {
       console.log('yourmom')
@@ -36,7 +39,6 @@ $(() => {
       $('.book').css('background-image', `url(img/alex_ethan.jpg)`);
       $('#button').css('display', 'block');
       $('#ethan-h1-text').css('transform', 'translateY(20%) translateX(190%)');
-      $('h2').html(`Respect for Father: ${respectForFather}%`);
     }
 
   $('form').on('submit', (event) => {
@@ -54,6 +56,8 @@ $(() => {
                $('h3').html(data.attachments[0].fallback);
                createBackgroundListner();
              }
+             $('h2').html(`Respect for Father: ${respectForFather}%`);
+
              refreshButton();
           },
           (error) => {
