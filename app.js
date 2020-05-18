@@ -7,7 +7,7 @@ $(() => {
     const createBackgroundListner = () => {
       $('body').on('click', (event) => {
         const randomEthanIndex = Math.floor(Math.random() * randomEthan.length);
-        console.log(randomEthanIndex);
+        console.log("ranomEthanIndex", randomEthanIndex);
         $('.dad-bubble').children().hide();
         $('#button').css('display', 'none');
         $('.book').css('background-image', `url(${randomEthan[randomEthanIndex]})`);
@@ -16,9 +16,9 @@ $(() => {
         $('.ethan-bubble').children().show();
         $('#ethan-bubble-image').attr('src', 'img/think_bubble.png');
         $('#ethan-h1-text').html(`${randomEthanQuote[randomEthanIndex]}`);
-        $('body').on('click', (event) => {
-          resetPage()
-        })
+         $('body').on('click', (event) => {
+           resetPage()
+         })
       })
     }
 
