@@ -36,6 +36,8 @@ body {
   color: black;
   font-size: 30px;
   width: 500px;
+  z-index: 1;
+
   transform: translateY(-460px) translateX(17%);
   position: absolute;
 }
@@ -60,7 +62,6 @@ body {
 .ethan-bubble h1 {
   color: black;
   width: 200px;
-  font-size: 50px;
   text-align: center;
   align-content: right;
   transform: translateY(20%) translateX(190%);
